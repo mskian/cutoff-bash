@@ -2,12 +2,10 @@
 
 ## Calculate Cut off Marks Using Bash Script
 
-[![Build Status](https://travis-ci.org/mskian/cutoff-bash.svg?branch=master)](https://travis-ci.org/mskian/cutoff-bash)
-
-<a target="_blank" href="https://github.com/mskian/cutoff-bash/blob/master/LICENSE" title="License: GPL"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
+[![Build Status](https://travis-ci.org/mskian/cutoff-bash.svg?branch=master)](https://travis-ci.org/mskian/cutoff-bash)  <a target="_blank" href="https://github.com/mskian/cutoff-bash/blob/master/LICENSE" title="License: GPL"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
 
 
-A Simple to Script to Calculate the Cut of Marks for Engineering, MBBS, Pure Science & Agriculture.
+A Simple Script to Calculate the Cut off Marks for Engineering, MBBS, Pure Science & Agriculture.
 
 Cut off Calculator Shell script for Linux and Android 📝
 
