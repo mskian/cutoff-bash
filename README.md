@@ -98,10 +98,6 @@ termux-setup-storage
 
 Just Fork & Send Pull Request
 
-## Donate
-
-If you like My work donate some bitcoins 💖 it will Boost me ☺ to develop more open source Projects.
-
 ## License
 
 MIT
