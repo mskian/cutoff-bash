@@ -1,8 +1,2 @@
 language: bash
-script: 
- - bash cutoff.sh
- - bash eng.sh
- - bash mbbs.sh
- - bash purescience.sh
- - bash agriculture.sh
- 
+script: make test
