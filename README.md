@@ -75,7 +75,7 @@ bash agriculture.sh
 ### Using on Android?
 
 - Down Termux From Google Play store - https://play.google.com/store/apps/details?id=com.termux&hl=en
-- After Installing this App Update the Packages & Install Git, & Enable Device Storage permission for Termux
+- After Installing this App Update the Packages, Install Git & Enable Device Storage permission for Termux
 - Update packages
 
 ```
