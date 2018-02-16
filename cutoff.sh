@@ -50,3 +50,5 @@ $ bash agriculture.sh
 
 -----------------------
 "
+
+exit 0

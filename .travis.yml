@@ -1,4 +1,11 @@
 language: bash
+
 script: 
  - bash cutoff.sh
- - bash eng.sh
+ - bash travistest.sh
+ - bash -n eng.sh
+ - bash -n mbbs.sh
+ - bash -n purescience.sh
+ - bash -n agriculture.sh
+
+ 
