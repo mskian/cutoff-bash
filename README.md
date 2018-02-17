@@ -94,6 +94,21 @@ pkg install git
 termux-setup-storage
 ```
 
+### Other Download Options
+
+- Install via cURL
+
+```
+curl -sL https://download.mskian.com/files/cutoff-bash.sh | bash -
+```
+
+- install via wget
+
+```
+wget -qO- https://download.mskian.com/files/cutoff-bash.sh | bash
+```
+
+
 ## Contribute
 
 Just Fork & Send Pull Request
