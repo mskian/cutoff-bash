@@ -1,4 +1,4 @@
-# cutoff-bash
+# Cut off Calculator
 
 ## Calculate Cut off Marks Using Bash Script
 
@@ -12,7 +12,7 @@ Cut off Calculator Shell script for Linux and Android 📝
 ## Requirements
 
 - Linux Based System
-- Android (Use Termux Android Terminal Emulator - Get it from Google Play store)
+- Android (Use Termux Android Terminal Emulator - Download it from Google Play store)
 - bc - Arbitrary Precision Calculator language (For Cut off Calculation)
 
 Ubuntu (Linux)
@@ -42,34 +42,41 @@ git clone https://github.com/mskian/cutoff-bash.git
 cd cutoff-bash
 ```
 
-- Run this Below command to Get the info & usage about this Cutoff Shell Script
+- Run this Below commands to Get the info & usage about this Cutoff Shell Script
 
 ```
-bash cutoff.sh
+chmod +x cutoff.sh
+./cutoff.sh -h
 ```
 
 ### Engineering
 
 ```
-bash eng.sh
+cutoff.sh -e
 ```
 
 ### Medical
 
 ```
-bash mbbs.sh
+cutoff.sh -m
 ```
 
 ### Pure Science
 
 ```
-bash purescience.sh
+cutoff.sh -p
 ```
 
 ### Agriculture
 
 ```
-bash agriculture.sh
+cutoff.sh -a
+```
+
+### Helo
+
+```
+cutoff.sh -h
 ```
 
 ### Using on Android?
@@ -88,6 +95,14 @@ apt update && apt upgrade
 pkg install git
 ```
 
+(or)
+
+- Install wget (Directly download the Cut off Calculator bash script)
+
+```
+pkg install wget
+```
+
 - Enable Termux Storage Permission (https://termux.com/storage.html)
 
 ```
@@ -99,13 +114,13 @@ termux-setup-storage
 - Install via cURL
 
 ```
-curl -sL https://download.mskian.com/files/cutoff-bash.sh | bash -
+curl -O https://download.mskian.com/files/cutoff.sh
 ```
 
 - install via wget
 
 ```
-wget -qO- https://download.mskian.com/files/cutoff-bash.sh | bash
+wget https://download.mskian.com/files/cutoff.sh
 ```
 
 
