@@ -1,8 +1,8 @@
 language: bash
 
 script: 
- - bash cutoff.sh
  - bash travistest.sh
+ - bash -n cutoff.sh
  - bash -n eng.sh
  - bash -n mbbs.sh
  - bash -n purescience.sh
