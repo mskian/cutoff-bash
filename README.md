@@ -1,4 +1,4 @@
-#Cut off Calculator CLI
+# Cut off Calculator CLI
 
 [![Build Status](https://travis-ci.org/mskian/cutoff-bash.svg?branch=master)](https://travis-ci.org/mskian/cutoff-bash)  <a target="_blank" href="https://github.com/mskian/cutoff-bash/blob/master/LICENSE" title="License: GPL"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
 
