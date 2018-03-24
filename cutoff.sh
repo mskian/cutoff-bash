@@ -1,28 +1,26 @@
 #!/usr/bin/env bash
 
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------
 # Info:
 #   author:    Santhosh veer
 #   file:      cutoff.sh
 #   created:   14.02.2018
-#   revision:  20.02.2018
-#   version:   0.2
-# -----------------------------------------------------------------------------
+#   revision:  24.03.2018
+#   version:   0.3
+# ----------------------------------------------------------------------------------
 # Requirements:
 #   bc
 # Description:
-#   Calculate Cutoff Marks using Shell script.
-# Usage:
-#   cutoff.sh
-# -----------------------------------------------------------------------------
+#   Calculate Cutoff Marks using Shell script - https://github.com/mskian/cutoff-bash
+#
+# -----------------------------------------------------------------------------------
+
+# Version Info
+VERSION=0.3
+
+## File name
 SCRIPTNAME=$(basename "$0")
 
-echo -e "\\n"
-echo -e "\\033[1;32m Cut off Calculator \\033[0m"
-echo -e "\\033[1;32m Version 0.2 \\033[0m"
-echo -e "\\033[1;32m Written By Santhosh veer  \\033[0m"
-echo -e "\\033[1;32m itrendbuzz.com <me@santhoshveer.com> \\033[0m"
-echo -e "\\n"
 
 # Calculate Cut off marks for Engineering
 engineering() {
@@ -39,6 +37,13 @@ echo -n "Enter your Chemistry Mark: "
 read -r chemistry
 
 echo "[+] Calculating your CUT OFF MARK..."
+
+ # If no Inputs you will see this Alert message
+  if [[ -z $maths || -z $physics || -z $chemistry ]]; then
+    echo -e "\\n"
+    echo -e "\\033[1;31m Error: Field is Missing \\033[0m \\n"
+    exit 1
+fi
 
 answer=$(echo "scale=2; $maths / 2 + $physics / 4 + $chemistry / 4" | bc)
 echo -e "\\033[1;35m Your Cut off Mark is - $answer \\033[0m"
@@ -60,6 +65,13 @@ echo -n "Enter your Chemistry Mark: "
 read -r chemistry
 
 echo "[+] Calculating your CUT OFF MARK..."
+
+ # If no Inputs you will see this Alert message
+  if [[ -z $biology || -z $physics || -z $chemistry ]]; then
+    echo -e "\\n"
+    echo -e "\\033[1;31m Error: Field is Missing \\033[0m \\n"
+    exit 1
+fi
 
 answer=$(echo "scale=2; $biology / 2 + $physics / 4 + $chemistry / 4" | bc)
 echo -e "\\033[1;35m Your Cut off Mark is - $answer \\033[0m"
@@ -85,6 +97,13 @@ read -r chemistry
 
 echo "[+] Calculating your CUT OFF MARK..."
 
+ # If no Inputs you will see this Alert message
+  if [[ -z $botany || -z $zoology || -z $physics || -z $chemistry ]]; then
+    echo -e "\\n"
+    echo -e "\\033[1;31m Error: Field is Missing \\033[0m \\n"
+    exit 1
+fi
+
 answer=$(echo "scale=2; $botany / 4 + $zoology / 4 + $physics / 4 + $chemistry / 4" | bc)
 echo -e "\\033[1;35m Your Cut off Mark is - $answer \\033[0m"
 
@@ -109,6 +128,13 @@ read -r chemistry
 
 echo "[+] Calculating your CUT OFF MARK..."
 
+ # If no Inputs you will see this Alert message
+  if [[ -z $biology || -z $maths || -z $physics || -z $chemistry ]]; then
+    echo -e "\\n"
+    echo -e "\\033[1;31m Error: Field is Missing \\033[0m \\n"
+    exit 1
+fi
+
 answer=$(echo "scale=2; $biology / 4 + $maths / 4 + $physics / 4 + $chemistry / 4" | bc)
 echo -e "\\033[1;35m Your Cut off Mark is - $answer \\033[0m"
 
@@ -118,6 +144,7 @@ echo -e "\\033[1;35m Your Cut off Mark is - $answer \\033[0m"
 check_for_empty_input(){
   if [ $# -eq 0 ];
   then
+      echo -e "\\n"
       echo -e "\\033[1;31m Error:  No input \\033[0m \\n"
       help
       exit 1
@@ -145,6 +172,7 @@ help(){
           -m   Calculate Cutoff Mark for Medical
           -p   Calculate Cutoff Mark for Purescience
           -a   Calculate Cutoff Mark for Agriculture
+          -v   Check the Script Version
           -h   Display this help message
           \\n"
 }
@@ -154,24 +182,33 @@ main(){
   check_for_empty_input "$@"
   check_requirements bc
 
-  while getopts 'empah' flag; do
+while getopts ':empavh' flag; do
     case "$flag" in 
-      e)
-        engineering
-       ;;
-      m)
-         mbbs
-      ;;
-      p)
-        purescience
-          ;;
-      a)
-        agriculture
-          ;;
-      h) help
-         exit 0
-          ;;
-          *)
+e)
+   engineering
+;;
+m)
+   mbbs
+;;
+p)
+  purescience
+;;
+a)
+  agriculture
+;;
+v)
+  echo -e "\\033[1;32m Version $VERSION \\033[0m"
+  exit 0
+;;
+h) 
+help
+exit 0
+;;
+?)
+echo "script usage: $SCRIPTNAME [-e] [-m] [-p] [-a]" >&2
+  exit 1
+  ;;
+*)
     esac
   done
   shift $((OPTIND-1))
