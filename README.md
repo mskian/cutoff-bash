@@ -35,16 +35,15 @@ pkg install bc
 wget https://download.mskian.com/files/cutoff.sh
 ```
 
-- open the cutoff-bash Folder
-
-```
-cd cutoff-bash
-```
-
-- Run this Below commands to Get the info & usage about this Cutoff Shell Script
+- Set Permission to Execute the Script
 
 ```
 chmod +x cutoff.sh
+```
+
+Run this Below commands to Get the info & usage about this Cutoff Shell Script
+
+```
 ./cutoff.sh -h
 ```
 
