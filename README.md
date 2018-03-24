@@ -115,10 +115,10 @@ termux-setup-storage
 curl -O https://download.mskian.com/files/cutoff.sh
 ```
 
-- install via wget
+- install via git
 
 ```
-wget https://download.mskian.com/files/cutoff.sh
+git clone https://github.com/mskian/cutoff-bash.git
 ```
 
 
