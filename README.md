@@ -29,10 +29,10 @@ pkg install bc
 
 ## How to use?
 
-- Use git to clone this respo
+- Download the Script
 
 ```
-git clone https://github.com/mskian/cutoff-bash.git
+wget https://download.mskian.com/files/cutoff.sh
 ```
 
 - open the cutoff-bash Folder
