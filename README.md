@@ -41,7 +41,7 @@ wget https://download.mskian.com/files/cutoff.sh
 chmod +x cutoff.sh
 ```
 
-Run this Below commands to Get the info & usage about this Cutoff Shell Script
+- Run this Below commands to Get the info & usage about this Cutoff Shell Script
 
 ```
 ./cutoff.sh -h
@@ -71,7 +71,7 @@ cutoff.sh -p
 cutoff.sh -a
 ```
 
-### Helo
+### Help
 
 ```
 cutoff.sh -h
